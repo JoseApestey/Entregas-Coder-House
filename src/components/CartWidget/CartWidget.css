@@ -1,5 +1,19 @@
-.img-carrito {
-    
-    height: 20px;
-    width: 20px;
-}
+.cart-widget-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .img-carrito {
+    width: 30px;
+    margin-right: 5px;
+    transition: color 0.3s;
+  }
+  
+  
+  .cart-container {
+    background-color: rgb(245, 245, 245); /* Color de fondo para el contenedor del carrito */
+    padding: 7px;
+    border-radius: 10px;
+    margin-left: 10px; /* Agregar un margen a la izquierda para separarlo del nav */
+  }

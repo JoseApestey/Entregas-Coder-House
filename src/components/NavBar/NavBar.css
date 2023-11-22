@@ -1,0 +1,81 @@
+/* NavBar.css */
+
+/* Estilos por defecto */
+.navBar {
+  background-color: #f5f5f5; /* Fondo gris casi blanco */
+  color: #000; /* Texto negro */
+  padding: 10px 20px; /* Espaciado superior e inferior, más espaciado izquierdo y derecho */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 40px; /* Menor altura */
+}
+
+.nameNavBar {
+  margin-left: 5rem;
+  font-size: 2.5rem; /* Tamaño de fuente mayor para el nombre del sitio */
+  color: rgb(51, 0, 75);
+  text-decoration:none; /* Quitar el subrayado */
+  border-top: 1px solid rgb(66, 0, 97);
+}
+
+.Categories {
+  display: flex;
+  gap:70px;
+}
+
+.Option {
+  text-decoration: none;
+  color: #fff; /* Cambio de color a negro para resaltar el texto */
+  transition: transform 0.5s, color 0.3s; /* Transición lenta en la escala y en el color */
+  background-color: #000; /* Botones negros */
+  padding: 10px 15px; /* Espaciado interior en los botones */
+  border-radius: 5px; /* Bordes redondeados */
+  font-weight: bold; /* Texto en negrita */
+  transform: scale(1); /* Escala original */
+}
+
+.Option:hover {
+  color: #fff;
+  background-color: rgb(31, 0, 9);
+  transform: scale(1.1); /* Escala ligeramente más grande en el hover */
+}
+
+.cart-container {
+  margin-right: 20px;
+  order: 3; /* Cambiar el orden para mantenerlo a la derecha */
+}
+
+.ActiveOption {
+  font-weight: bold;
+  background-color: #333; /* Fondo oscuro para el botón activo */
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration:none;
+}
+
+/* Estilos para pantallas más pequeñas (responsive) */
+@media (max-width: 768px) {
+  .navBar {
+    height: 80px; /* Aumentar la altura en pantallas pequeñas */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px; /* Espaciado en pantallas pequeñas */
+  }
+
+  .Categories {
+    flex-direction: column;
+  }
+
+  .Option {
+    margin-bottom: 10px;
+  order: 2; /* Cambiar el orden de los botones en pantallas pequeñas */
+  }
+
+  .cart-container {
+    margin-top: 10px; /* Ajustar el espaciado superior en pantallas pequeñas */
+    order: 1; /* Cambiar el orden para llevarlo arriba a la derecha */
+  }
+}

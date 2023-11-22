@@ -1,0 +1,70 @@
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+  
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Alinear los botones en varias filas en pantallas pequeñas */
+    
+  }
+  
+  .buttonCount {
+    background-color: rgb(185, 47, 132);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 1.em;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    transition: background-color 1s;
+  }
+
+  .buttonOpcion {
+    margin: 0;
+  }
+
+  .button:hover {
+    background-color: rgb(124, 36, 58);
+    color: #fff;
+  }
+  
+  .number {
+    font-size: 1.3em;
+    margin: 0 10px;
+  }
+  
+  .button-cart {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .button-cart:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Estilos para pantallas pequeñas (menos de 768px) */
+  @media (max-width: 768px) {
+    .controls {
+      justify-content: center; /* Centrar los botones en pantallas pequeñas */
+      margin-top: 10px;
+    }
+  
+    .number {
+      margin: 0;
+    }
+  }
