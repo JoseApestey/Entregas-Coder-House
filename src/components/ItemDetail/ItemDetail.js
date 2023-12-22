@@ -1,9 +1,28 @@
 import styled from 'styled-components';
 import ItemCount from '../ItemCount/ItemCount'
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom'
+import { useContext, useState } from 'react';
+import { CartContext } from '../../context/CartContext';
 
 
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
+
+  const [quantityAdded, setQuantityAdded] = useState(0)
+
+  const { addItem } = useContext(CartContext)
+
+  const handleOnAdd = (quantity) => {
+    setQuantityAdded(quantity)
+
+    const item = {
+      id, name, price
+    }
+
+    addItem(item, quantity)
+  }
+
+
   return (
     <ListGroupDetail>
       <CardItemDetail>
@@ -24,7 +43,13 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
           <InfoDetail>Precio: ${price}</InfoDetail>
         </section>
         <ItemFooterDetail>
-        <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log('cantidad agregada', quantity)}  />
+          {
+            quantityAdded > 0 ? (
+              <Link to='/cart'>Terminar Compra</Link>
+            ) : (
+              <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
+            )
+          }
         </ItemFooterDetail>
       </CardItemDetail>
     </ListGroupDetail>

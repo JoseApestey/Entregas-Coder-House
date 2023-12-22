@@ -4,7 +4,7 @@
     cursor: pointer;
   }
   
-  .img-carrito {
+  .CartImg {
     width: 30px;
     margin-right: 5px;
     transition: color 0.3s;
